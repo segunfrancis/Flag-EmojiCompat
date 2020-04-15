@@ -22,7 +22,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
@@ -34,6 +33,7 @@ dependencies {
     implementation 'androidx.emoji:emoji:1.0.0'
     implementation 'androidx.emoji:emoji-appcompat:1.0.0'
     implementation 'androidx.emoji:emoji-bundled:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

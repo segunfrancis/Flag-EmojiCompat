@@ -6,6 +6,103 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="All Emoji"
+                android:textColor="@android:color/white"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/colorAccent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="New Emoji"
+                android:textColor="@android:color/white"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/colorAccent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Frequent Emoji"
+                android:textColor="@android:color/white"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/colorAccent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Travel Emoji"
+                android:textColor="@android:color/white"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/colorAccent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Sport Emoji"
+                android:textColor="@android:color/white"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/colorAccent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Plant Emoji"
+                android:textColor="@android:color/white"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/colorAccent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Animal Emoji"
+                android:textColor="@android:color/white"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/colorAccent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Country Flag Emoji"
+                android:textColor="@android:color/white"
+                app:checkedIconVisible="true"
+                app:chipBackgroundColor="@color/colorAccent" />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
     <androidx.emoji.widget.EmojiTextView
         android:id="@+id/text_1"
         android:layout_width="wrap_content"
