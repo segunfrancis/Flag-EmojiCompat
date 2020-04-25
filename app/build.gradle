@@ -22,6 +22,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
@@ -34,6 +42,7 @@ dependencies {
     implementation 'androidx.emoji:emoji-appcompat:1.0.0'
     implementation 'androidx.emoji:emoji-bundled:1.0.0'
     implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.work:work-runtime-ktx:2.3.4'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

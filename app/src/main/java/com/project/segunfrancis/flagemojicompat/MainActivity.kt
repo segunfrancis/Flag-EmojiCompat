@@ -2,6 +2,11 @@ package com.project.segunfrancis.flagemojicompat
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.lifecycle.Observer
+import androidx.work.Constraints
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +17,19 @@ class MainActivity : AppCompatActivity() {
 
         text_1.text = "NG".toFlagEmoji()
         text_2.text = "GB".toFlagEmoji()
+
+        val constraint = Constraints.Builder().setRequiresCharging(true).build()
+        val request = OneTimeWorkRequestBuilder<MyWork>()
+            .setConstraints(constraint)
+            .build()
+        notifyButton.setOnClickListener {
+            WorkManager.getInstance(this).enqueue(request)
+        }
+        WorkManager.getInstance(this).getWorkInfoByIdLiveData(request.id)
+            .observe(this, Observer { workInfo ->
+                val status: String = workInfo.state.name
+                Toast.makeText(this@MainActivity, status, Toast.LENGTH_LONG).show()
+            })
     }
 
     private fun String.toFlagEmoji(): String {
